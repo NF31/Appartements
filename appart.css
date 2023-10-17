@@ -1,0 +1,1408 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box;
+  font-family: "Oswald", sans-serif;
+}
+
+/* Nav section*/
+
+nav {
+  background-color: #787878;
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+  padding: 0 5%;
+}
+
+nav .logo {
+  position: absolute;
+  left: 20px;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 25px;
+}
+
+nav .logo:hover {
+  cursor: pointer;
+  border-bottom: 1px solid;
+  border-color: #ffffff;
+  transition: border-color 0.4s;
+}
+
+span {
+  color: #29d9d5;
+}
+
+nav .lemenu {
+  display: flex;
+  align-items: center;
+  top: 20px;
+  margin: auto;
+}
+
+nav .lemenu li {
+  margin: 0 15px;
+}
+
+nav .lemenu li a {
+  color: #ffffff;
+  font-size: 25px;
+}
+
+.lemenu :hover {
+  cursor: pointer;
+  border-bottom: 1px solid;
+  border-color: #ffffff;
+  transition: border-color 0.4s;
+}
+
+label {
+  position: absolute;
+  width: 45px;
+  height: 25px;
+  right: 20%;
+  border-radius: 20px;
+  border: 2px solid;
+}
+
+label::before {
+  position: absolute;
+  height: 19px;
+  width: 20px;
+  background-color: #000000;
+  cursor: pointer;
+  transition: 0.4s;
+  border-radius: 50%;
+  content: "";
+  margin-left: 2px;
+  top: 1px;
+}
+
+label.active::before {
+  left: 18px;
+  background-color: #ffffff;
+}
+
+#kaleidoscope {
+  width: 40px;
+  display: none;
+}
+
+body.night {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+nav .menu_btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+nav .btn_style {
+  border: 2px solid #29d9d5;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bolder;
+  padding: 8px 20px;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.5s;
+  margin-right: 20px;
+}
+
+/* Close Menu*/
+.menu {
+  background-color: #ffffff;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 100vh;
+  width: 0;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.5s;
+}
+
+.menu img {
+  width: 650px;
+  margin-left: 50px;
+  border-radius: 50px;
+}
+
+.menu a {
+  position: relative;
+
+  font-size: 70px;
+  font-family: "Oswald", sans-serif;
+}
+
+.menu a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #000000;
+  border-radius: 6px;
+  height: 2px;
+  width: 0;
+  transition: 0.5s;
+}
+
+.menu a:hover:after {
+  width: 100%;
+}
+
+.menu button {
+  display: none;
+}
+
+section {
+  height: 80vh;
+}
+
+/* Home section */
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url(./img/appart-dubai.webp);
+  background-size: cover;
+  background-position: center;
+}
+
+.home .arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 80px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: anime1 0.5s ease-out infinite;
+}
+
+.home .arrow img {
+  width: 40px;
+}
+
+/* Arrow animation*/
+@keyframes anime1 {
+  50% {
+    transform: translateY(5px);
+  }
+}
+
+/*Accueil section*/
+
+.build {
+  padding: 40px;
+}
+
+.acc {
+  display: flex;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+.acc .left {
+  border: 3px solid #29d9d5;
+  border-radius: 28px;
+  padding: 8px 25px;
+  width: 49%;
+  margin: auto;
+  font-weight: bolder;
+}
+
+.left h3 {
+  text-shadow: 1px 1px 2px pink;
+  text-align: center;
+  align-items: center;
+}
+
+.left p {
+  padding: 3%;
+}
+
+.acc .right {
+  margin-right: 20px;
+  width: 45%;
+}
+
+.right img {
+  width: 100%;
+  border-radius: 28px;
+}
+
+#sud {
+  width: 100%;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    transform: translate(0, 25px);
+  }
+
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+/* Gallery Section*/
+
+.gallery {
+  padding-top: 8%;
+  border-radius: 25px;
+}
+
+.gallery h2 {
+  text-align: left;
+  margin-bottom: 20px;
+  margin-left: 50px;
+  text-transform: uppercase;
+}
+
+.apt {
+  display: flex;
+}
+
+.look {
+  margin: 11px 50px 20px;
+}
+
+.look div {
+  margin: 2% 0 auto;
+  text-align: end;
+  height: 210px;
+  border-radius: 10px;
+}
+
+h4 {
+  text-align: left;
+  padding-top: 10px;
+  margin-top: 15px;
+  margin-left: 10px;
+  font-weight: bold;
+  font-size: medium;
+  text-shadow: #fc0 1px 0 10px;
+}
+
+.gallery img {
+  width: 355px;
+}
+
+#miami {
+  width: 360px;
+}
+
+#marbe {
+  width: 330px;
+}
+
+#ads {
+  width: 360px;
+}
+
+#lib {
+  width: 320px;
+}
+
+#kin {
+  width: 320px;
+}
+
+.apt div p {
+  text-align: center;
+  margin: 15px;
+  margin-bottom: 20px;
+}
+
+.look div a {
+  border: 2px solid;
+  border-radius: 20px;
+  padding: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+  text-align: end;
+  margin-right: 13px;
+}
+
+.look div a:hover {
+  border: 2px solid #29d9d5;
+  color: #29d9d5;
+  font-weight: 700;
+  transform: translateY(-5px);
+  background-color: #ffffff;
+}
+
+/* Contact section*/
+
+#gazo {
+  height: 750px;
+  padding: 100px 15px;
+}
+
+.contact {
+  padding: 40px;
+}
+
+.ct {
+  margin-bottom: 20px;
+}
+
+.bigboss {
+  max-width: 1000px;
+  margin: 0px auto;
+  align-items: center;
+  flex-direction: column;
+  display: flex;
+  padding: 30px 10px;
+  border-radius: 15px;
+}
+
+.intermediaire {
+  font-size: 15px;
+  height: 100px;
+}
+
+#agence {
+  font-size: larger;
+  font-weight: 900;
+}
+
+form {
+  margin-left: 20px;
+}
+
+form input {
+  width: 440px;
+  border-radius: 25px;
+  border: solid;
+  border-bottom: 3px solid;
+  margin: 10px 10px;
+  padding: 8px;
+  margin-bottom: 13px;
+}
+
+form input:hover {
+  border: 2px solid #ff3028;
+}
+
+form textarea:hover {
+  border: 2px solid #ff3028;
+}
+
+form textarea {
+  border-radius: 25px;
+  border: solid;
+  border-bottom: 3px solid;
+  margin: 45px 0;
+  padding: 15px;
+  width: 920px;
+}
+
+.bigboss form button {
+  width: 192px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  display: block;
+  margin-top: 20px;
+  outline: none;
+  background-color: #29d9d5;
+  color: #ffffff;
+  font-weight: bold;
+  cursor: pointer;
+  margin: auto;
+  transition: 0.3s;
+  box-shadow: 10px 5px 5px #000000;
+}
+
+.bigboss form button:hover {
+  background-color: #000000;
+  color: #29d9d5;
+  border: 2px solid #ff3028;
+  transform: translateY(-5px);
+  box-shadow: 10px 5px 5px #29d9d5;
+}
+
+/* Footer section */
+
+footer {
+  border-top: 1px solid #787878;
+  padding: 20px;
+}
+
+.foot {
+  display: flex;
+}
+
+footer div a i {
+  font-size: 30px;
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  margin: 0 9px;
+}
+
+footer p {
+  text-align: center;
+  font-size: 15px;
+  margin: auto;
+  font-weight: bold;
+}
+
+.news {
+  width: 30%;
+}
+
+#dernier {
+  height: 20px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+
+@keyframes floating {
+  0% {
+    transform: translate(0, 0px);
+  }
+
+  50% {
+    transform: translate(0, 25px);
+  }
+
+  100% {
+    transform: translate(0, -0px);
+  }
+}
+
+/*Responsive*/
+
+@media screen and (max-width: 1000px) {
+
+  /* Nav section */
+  nav .lemenu {
+    top: 12em;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    margin-left: -100%;
+    transition: all 0.5s ease;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  nav .lemenu ul li {
+    margin: 15px 0;
+  }
+
+  nav .lemenu li a {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 800;
+  }
+
+  .lemenu.mobile-menu {
+    margin-left: 0;
+  }
+
+  #kaleidoscope {
+    width: 40px;
+    margin: auto;
+    display: block;
+  }
+
+  label {
+    position: absolute;
+    width: 45px;
+    height: 25px;
+    right: 30%;
+    border-radius: 20px;
+    border: 2px solid white;
+  }
+
+  nav .btn_style {
+    border: 2px solid #000000;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bolder;
+    padding: 8px 20px;
+    color: #000000;
+    cursor: pointer;
+    transition: 0.5s;
+    position: absolute;
+  }
+
+  /* Nav section */
+
+  /* Home section */
+  .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./img/appart-piscine.png);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .home .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 87px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: anime1 0.5s ease-out infinite;
+  }
+
+  /* Home section */
+
+  /* Accueil section */
+
+  .build {
+    padding: 40px;
+    height: 800px;
+  }
+
+  h2 {
+    margin-top: 8%;
+    margin-bottom: 4%;
+  }
+
+  .acc {
+    margin: auto;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    display: block;
+  }
+
+  .acc .left {
+    border: 3px solid #29d9d5;
+    border-radius: 28px;
+    padding: 8px 25px;
+    width: 550px;
+    margin: auto;
+    font-weight: bolder;
+    margin-bottom: 4%;
+  }
+
+  .acc .right {
+    width: 550px;
+    margin: auto;
+  }
+
+  #sud {
+    width: 100%;
+    border: 3px solid #29d9d5;
+    border-radius: 28px;
+  }
+
+  /* Accueil section */
+
+  /* Gallery section */
+  .gallery {
+    padding-top: 20%;
+  }
+
+  .apt {
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+
+  }
+
+  .look div {
+    height: 210px;
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: medium;
+    text-shadow: #fc0 1px 0 10px;
+  }
+
+  .apt div p {
+    text-align: center;
+
+    width: 47%;
+
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 4%;
+  }
+
+  .gallery img {
+    width: 355px;
+    border-radius: 28px;
+    border: 3px solid #29d9d5;
+  }
+
+  /* Gallery section */
+
+  /* Contact section */
+
+  #gazo {
+    padding: 26px 15px;
+  }
+
+  .intermediaire {
+    font-size: 15px;
+    margin-right: auto;
+    margin-left: 15px;
+    height: 100px;
+  }
+
+  form {
+    display: grid;
+  }
+
+  form input {
+    width: 440px;
+    border-radius: 25px;
+    border: solid;
+    border-bottom: 3px solid;
+    padding: 8px;
+    margin: 15px auto;
+  }
+
+  form textarea {
+    width: 440px;
+  }
+
+  /* Contact section */
+
+  /* Footer section */
+  footer {
+    border-top: 1px solid #787878;
+    padding: 20px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  footer p {
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+  }
+
+  #dernier {
+    height: 35px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: solid;
+    padding: 9px;
+  }
+
+  /* Footer section */
+}
+
+
+
+
+/*Responsive*/
+
+@media screen and (max-width: 650px) {
+
+  .build,
+  .gallery,
+  .contact,
+  footer {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  /* Nav section */
+  nav .lemenu {
+    top: 12em;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    margin-left: -100%;
+    transition: all 0.5s ease;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  nav .lemenu ul li {
+    margin: 15px 0;
+  }
+
+  nav .lemenu li a {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 800;
+  }
+
+  .lemenu.mobile-menu {
+    margin-left: 0;
+  }
+
+  #kaleidoscope {
+    width: 40px;
+    margin: auto;
+    display: block;
+  }
+
+  label {
+    position: absolute;
+    width: 45px;
+    height: 25px;
+    right: 30%;
+    border-radius: 20px;
+    border: 2px solid white;
+  }
+
+  nav .btn_style {
+    border: 2px solid #000000;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bolder;
+    padding: 8px 20px;
+    color: #000000;
+    cursor: pointer;
+    transition: 0.5s;
+
+    position: absolute;
+  }
+
+  /* Nav section */
+
+  /* Home section */
+  .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./img/appart-piscine.png);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .home .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 87px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: anime1 0.5s ease-out infinite;
+  }
+
+  /* Home section */
+
+  /* Accueil section */
+
+  .build {
+    padding: 40px;
+    height: 800px;
+  }
+
+  .acc {
+    margin: auto;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    display: block;
+  }
+
+  .acc .left {
+    border: 3px solid #29d9d5;
+    border-radius: 28px;
+    padding: 8px 25px;
+    width: 550px;
+    margin: auto;
+    font-weight: bolder;
+    margin-bottom: 4%;
+  }
+
+  .acc .right {
+    width: 550px;
+    margin: auto;
+  }
+
+  #sud {
+    width: 100%;
+    border: 3px solid #29d9d5;
+    border-radius: 28px;
+  }
+
+  /* Accueil section */
+
+  /* Gallery section */
+  .gallery {
+    padding-top: 20%;
+  }
+
+  .apt {
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+
+  }
+
+  .look div {
+    height: 210px;
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: medium;
+    text-shadow: #fc0 1px 0 10px;
+  }
+
+  .apt div p {
+    text-align: center;
+
+    width: 47%;
+
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 4%;
+  }
+
+  .gallery img {
+    width: 355px;
+    border-radius: 28px;
+    border: 3px solid #29d9d5;
+  }
+
+  /* Gallery section */
+
+  /* Contact section */
+
+  #gazo {
+    padding: 20px 15px;
+  }
+
+  .intermediaire {
+    font-size: 15px;
+    margin-right: auto;
+    margin-left: 15px;
+    height: 100px;
+  }
+
+  form {
+    display: grid;
+  }
+
+  form input {
+    width: 440px;
+    border-radius: 25px;
+    border: solid;
+    border-bottom: 3px solid;
+    padding: 8px;
+    margin: 15px auto;
+  }
+
+  form textarea {
+    width: 440px;
+  }
+
+  /* Contact section */
+
+  /* Footer section */
+  footer {
+    margin-top: 6%;
+    border-top: 1px solid #787878;
+    padding: 20px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  .icons {
+    display: flex;
+  }
+
+  footer p {
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+  }
+
+  #dernier {
+    height: 35px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: solid;
+    padding: 9px;
+  }
+
+  /* Footer section */
+}
+
+
+/*Responsive*/
+
+@media screen and (max-width: 600px) {
+
+  .build,
+  .gallery,
+  .contact,
+  footer {
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  /* Nav section */
+  nav .lemenu {
+    top: 12em;
+    position: absolute;
+    width: 100%;
+    justify-content: center;
+    margin-left: -100%;
+    transition: all 0.5s ease;
+  }
+
+  nav ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  nav .lemenu ul li {
+    margin: 15px 0;
+  }
+
+  nav .lemenu li a {
+    color: #ffffff;
+    font-size: 35px;
+    font-weight: 800;
+  }
+
+  .lemenu.mobile-menu {
+    margin-left: 0;
+  }
+
+  #kaleidoscope {
+    width: 40px;
+    margin: auto;
+    display: block;
+  }
+
+  label {
+    position: absolute;
+    width: 45px;
+    height: 25px;
+    right: 30%;
+    border-radius: 20px;
+    border: 2px solid white;
+  }
+
+  nav .btn_style {
+    border: 2px solid #000000;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: bolder;
+    padding: 8px 20px;
+    color: #000000;
+    cursor: pointer;
+    margin-right: -1%;
+    transition: 0.5s;
+
+    position: absolute;
+  }
+
+  /* Nav section */
+
+  /* Home section */
+  .home {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-image: url(./img/appart-piscine.png);
+    background-size: cover;
+    background-position: center;
+  }
+
+  .home .arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    bottom: 87px;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    cursor: pointer;
+    animation: anime1 0.5s ease-out infinite;
+  }
+
+  /* Home section */
+
+  /* Accueil section */
+
+  .build {
+    padding: 40px;
+    height: 860px;
+  }
+
+  .acc {
+    margin: auto;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    display: block;
+  }
+
+  .acc .left {
+    border: 3px solid #29d9d5;
+    border-radius: 28px;
+    padding: 8px 25px;
+    width: 509px;
+    margin: auto;
+    font-weight: bolder;
+    margin-bottom: 4%;
+  }
+
+  .acc .right {
+    width: 510px;
+    margin: auto;
+  }
+
+  #sud {
+    width: 100%;
+    border: 3px solid #29d9d5;
+    border-radius: 28px;
+  }
+
+  /* Accueil section */
+
+  /* Gallery section */
+  .gallery {
+    padding-top: 20%;
+  }
+
+  .apt {
+    margin-top: 7%;
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: center;
+
+  }
+
+  .look {
+    margin-bottom: 6%;
+  }
+
+  #accra {
+    margin-top: 5%;
+    width: 340px;
+  }
+
+  .look div {
+    height: 210px;
+    text-align: center;
+  }
+
+  h4 {
+    text-align: center;
+    padding-top: 10px;
+    font-weight: bold;
+    font-size: medium;
+    text-shadow: #fc0 1px 0 10px;
+  }
+
+  .apt div p {
+    text-align: center;
+
+    width: 47%;
+
+    margin: auto;
+    margin-top: 3%;
+    margin-bottom: 4%;
+  }
+
+  .gallery img {
+    width: 355px;
+    border-radius: 28px;
+    border: 3px solid #29d9d5;
+  }
+
+  /* Gallery section */
+
+  /* Contact section */
+
+  #gazo {
+    padding: 20px 15px;
+  }
+
+  .intermediaire {
+    font-size: 15px;
+    margin-right: auto;
+    margin-left: 15px;
+    height: 100px;
+  }
+
+  form {
+    display: grid;
+  }
+
+  form input {
+    width: 440px;
+    border-radius: 25px;
+    border: solid;
+    border-bottom: 3px solid;
+    padding: 8px;
+    margin: 15px auto;
+  }
+
+  form textarea {
+    width: 440px;
+  }
+
+  /* Contact section */
+
+  /* Footer section */
+  footer {
+    margin-top: 6%;
+    border-top: 1px solid #787878;
+    padding: 20px;
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+  }
+
+  .icons {
+    display: flex;
+  }
+
+  footer p {
+    text-align: center;
+    margin: auto;
+    font-weight: bold;
+  }
+
+
+  .news {
+    width: 44%;
+  }
+
+  #dernier {
+    height: 35px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 25px;
+    border: solid;
+    padding: 9px;
+  }
+
+  /* Footer section */
+}
+
+@media screen and (max-width: 550px) {
+  #kaleidoscope {
+    width: 40px;
+    margin-right: 39%;
+  }
+
+  .acc .left {
+    border: 3px solid #29d9d5;
+    border-radius: 28px;
+    padding: 8px 25px;
+    width: 461px;
+    margin: auto;
+    font-weight: bolder;
+    margin-bottom: 4%;
+}
+.acc .right {
+  width: 471px;
+  margin: auto;
+}
+.look {
+  margin: 12px;
+}
+#douala{
+  margin-top: 7%;
+}
+
+.icons {
+  display: grid;
+}
+
+.news {
+  width: 35%;
+}
+}
+
+@media screen and (max-width: 518px) {
+  #kaleidoscope {
+    width: 40px;
+    margin-right: 38%;
+}
+
+label {
+  right: 28%;
+}
+
+nav .btn_style {
+  border: 2px solid #000000;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bolder;
+  padding: 8px 20px;
+  color: #000000;
+  cursor: pointer;
+  margin-right: -3%;
+  transition: 0.5s;
+  position: absolute;
+}
+
+.look div {
+  margin-bottom: 5%;
+}
+
+#miami {
+  width: 354px;
+  margin-top: 4%;
+}
+
+#accra {
+  margin-top: 10%;
+
+}
+#ads {
+
+  margin-top: 4%;
+}
+#nice{
+  margin-top: 5%;
+}
+.news {
+  width: 40%;
+}
+}
+
+@media screen and (max-width: 500px) {
+  #kaleidoscope {
+    width: 32px;
+    margin-right: 37%;
+}
+
+  nav .btn_style {
+    margin-right: -4%;
+}
+.acc .left {
+  border: 3px solid #29d9d5;
+  border-radius: 28px;
+  padding: 8px 25px;
+  width: 437px;
+  margin: auto;
+  font-weight: bolder;
+  margin-bottom: 4%;
+}
+
+.acc .right {
+  width: 430px;
+  margin: auto;
+}
+}
+
+
+@media screen and (max-width:400px) {
+
+  nav .btn_style {
+top: 5px;
+    padding: 4px 3px;
+
+}
+label {
+  right: 10%;
+  top: 38px;
+}
+nav .logo {
+  position: absolute;
+  left: 9px;
+ color: #ffffff; 
+  font-size: 18px;
+}
+
+.acc .left {
+  width: 339px;
+  margin-bottom: 4%;
+}
+
+.acc .right {
+  width: 333px;
+}
+.gallery {
+  padding-top: 44%;
+}
+
+#cannes{
+  margin-top: 6%;
+}
+
+#douala {
+  margin-top: 11%;
+}
+#gazo {
+  margin-top: 12%;
+
+}
+
+form input {
+  width: 357px;
+
+}
+
+form textarea {
+  width: 363px;
+}
+.news {
+  width: 51%;
+}
+}

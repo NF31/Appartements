@@ -1,0 +1,21 @@
+body {
+    background-image: url(./img/admin-access.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+.container .content h1 {
+    font-size: 50px;
+    
+}
+
+.container .content h3 {
+    font-size: 30px;
+   
+}
+#trator {
+    margin-top: 40%;
+    font-size: 120px;
+}
